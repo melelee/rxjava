@@ -18,7 +18,9 @@ public class Demo {
             public void call(Subscriber<? super String> subscriber) {
                 subscriber.onNext("this is a message 1");//发送第一条信息
                 subscriber.onNext("this is a message 2");//发送第二条信息
+                subscriber.onError(new Exception(""));//发送完成
                 subscriber.onCompleted();//发送完成
+
             }
         });
 
